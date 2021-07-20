@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>Grams Per Dollar</title>
 </head>
 
-<body>
+<body class="hero-image">
     <div id="alert-container">
         <div id="alert">
             <p id="alert-message"></p>
@@ -18,23 +21,25 @@
     </div>
     <header>
         <h1>Grams Per Dollar Calculator</h1>
-        <!-- <p>A tool to help you determine if upgrading your bike is worth it.</p> -->
+        <!-- <p>A tool to help you determine if upgrading your bike is worth the money.</p> -->
     </header>
-    <main>
-        <div>
-            <label>Weight of existing part in <span class="unit">grams</span></label><input id="old" type="text" value="248" />
+    <div id="logic">
+        <div id="labels">
+            <label>Weight of existing part in <span class="unit">grams</span></label>
+            <label>Weight of upgrade part in <span class="unit">grams</span></label>
+            <label>Cost of existing part</label>
         </div>
-        <div>
-            <label>Weight of upgrade part in <span class="unit">grams</span></label><input id="new" type="text" value="234" />
-        </div>
-        <div>
-            <label>Cost of existing part</label>$<input id="cost" type="text" value="279.99" />
+        <div id="inputs">
+            <input id="old" type="text" value="248" />
+            <input id="new" type="text" value="234" />
+            <input id="cost" type="text" value="279.99" />
         </div>
         <div id="output"></div>
-        <button onclick="go()">Calculate</button>
-    </main>
-
-    <button id="switch" onclick="toggle()">Switch to Ounces</button>
+    </div>
+    <div id="controls">
+        <button id="calculate" onclick="go()">Calculate</button>
+        <button id="switch" onclick="toggle()">Switch to Ounces</button>
+    </div>
     <script src="./app.js"></script>
 </body>
 

@@ -26,7 +26,9 @@ const go = () => {
         return;
     }
     dpg = dpg.toFixed(2);
-    output.innerText = `$${dpg} per ${unit}`; // Trim the "s" --
+    
+    // Remove the "s" for the output --
+    output.innerText = `$${dpg} per ${unit.slice(0, -1)}`;
 }
 
 const clearInputs = () => {
@@ -68,6 +70,7 @@ const toggle = () => {
         spans[i].innerText = unit;
     }
 
+    // Capitalize the unit for the title --
     title.innerText = `${unit.charAt(0).toUpperCase() + unit.slice(1)} Per Dollar Calculator`;
 
 }
@@ -78,7 +81,8 @@ const gto = () => {
 
     oldpart.value = (oldpart.value * cr).toFixed(2);
     newpart.value = (newpart.value * cr).toFixed(2);
-    go();
+
+    if(output.innerText) go();
 }
 
 const otg = () => {
@@ -87,5 +91,8 @@ const otg = () => {
 
     oldpart.value = (oldpart.value * cr).toFixed(2);
     newpart.value = (newpart.value * cr).toFixed(2);
-    go();
+    
+    if(output.innerText) go();
 }
+
+// For Example Buttons. Ultegra to DA... --

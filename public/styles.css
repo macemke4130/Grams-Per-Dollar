@@ -3,8 +3,82 @@
     padding: 0;
 }
 
+h1, label, button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./img/bg.jpg");  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 10px black;
+}
+
+#logic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+}
+
+#controls button {
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-weight: 400;
+    background-color: white;
+    border: none;
+}
+
+#calculate {
+    font-size: 1.5em;
+}
+
+#switch {
+    font-size: 0.8em;
+}
+
+#labels, #inputs {
+    display: flex;
+    flex-direction: column;
+}
+
 header, main {
     z-index: 0;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3em;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.1em black;
+}
+
+label, input {
+    margin: 0.25em;
+}
+
+label {
+    font-weight: 400;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.1em black;
+}
+
+input {
+    font-size: 1.5em;
+    width: 5em;
 }
 
 #output {
