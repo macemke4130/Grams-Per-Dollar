@@ -3,17 +3,15 @@ console.log("lucasmace4130@gmail.com");
 console.log("www.lucasmace.com");
 
 let unit = "grams";
-
 const oldpart = document.getElementById("old");
 const newpart = document.getElementById("new");
 const cost = document.getElementById("cost");
-
+const output = document.getElementById("output");
 const bg = document.getElementById("alert-container");
 const alertMessage = document.getElementById("alert-message");
-const output = document.getElementById("output");
 
 const go = () => {
-    const delta = oldpart.value - newpart.value;
+    let delta = oldpart.value - newpart.value;
     let price = cost.value;
 
     if (price.charAt(0) === "$") {
@@ -32,9 +30,10 @@ const go = () => {
         return;
     }
     dpg = dpg.toFixed(2);
-    
+    delta = delta.toFixed(2);
+
     // Remove the "s" for the output --
-    output.innerText = `$${dpg} per ${unit.slice(0, -1)}`;
+    output.innerText = `${delta} ${unit} at $${dpg} per ${unit.slice(0, -1)}`;
 }
 
 const clearInputs = () => {
@@ -63,11 +62,13 @@ const toggle = () => {
         case "grams":
             unit = "ounces";
             switchButton.innerText = "Switch to Grams";
+            document.title = "Ounces per Dollar";
             gto();
             break;
         case "ounces":
             unit = "grams";
             switchButton.innerText = "Switch to Ounces";
+            document.title = "Grams per Dollar";
             otg();
             break;
     }
@@ -78,7 +79,6 @@ const toggle = () => {
 
     // Capitalize the unit for the title --
     title.innerText = `${unit.charAt(0).toUpperCase() + unit.slice(1)} Per Dollar Calculator`;
-
 }
 
 const gto = () => {
@@ -88,7 +88,7 @@ const gto = () => {
     oldpart.value = (oldpart.value * cr).toFixed(2);
     newpart.value = (newpart.value * cr).toFixed(2);
 
-    if(output.innerText) go();
+    if (output.innerText) go();
 }
 
 const otg = () => {
@@ -97,8 +97,14 @@ const otg = () => {
 
     oldpart.value = (oldpart.value * cr).toFixed(2);
     newpart.value = (newpart.value * cr).toFixed(2);
-    
-    if(output.innerText) go();
+
+    if (output.innerText) go();
+}
+
+document.addEventListener('keydown', logKey);
+function logKey(e) {
+    if (e.code != "Enter") return;
+    go();
 }
 
 // For Example Buttons. Ultegra to DA... --

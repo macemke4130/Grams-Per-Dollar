@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-h1, label, button, #output, #alert-message, #credit a {
+h1, label, button, #output, #alert-message, #credit a, p {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -19,6 +19,14 @@ h1, label, button, #output, #alert-message, #credit a {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 5px 10px black;
+}
+
+p {
+    font-size: 1.2em;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    margin-bottom: 1em;
 }
 
 #logic {
@@ -118,7 +126,9 @@ input {
 
 #alert-message {
     font-size: 2em;
+    font-weight: 400;
     text-align: center;
+    color: black;
 }
 
 #alert button {
