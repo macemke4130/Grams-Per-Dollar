@@ -1,0 +1,16 @@
+{
+  "name": "grams-per-dollar",
+  "version": "1.0.0",
+  "description": "Calculator for determining how many grams you shave per dollar per upgrade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Mace",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "type": "module"
+}
+
