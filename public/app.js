@@ -1,5 +1,5 @@
 console.log("Created by Lucas Mace");
-console.log("lucasmace@gmail.com");
+console.log("lucasmace4130@gmail.com");
 console.log("www.lucasmace.com");
 
 let unit = "grams";
@@ -14,7 +14,13 @@ const output = document.getElementById("output");
 
 const go = () => {
     const delta = oldpart.value - newpart.value;
-    let dpg = cost.value / delta;
+    let price = cost.value;
+
+    if (price.charAt(0) === "$") {
+        price = cost.value.substring(1);
+        Number(price);
+    }
+    let dpg = price / delta;
 
     if (isNaN(dpg)) {
         myAlert("All inputs must be numbers.");

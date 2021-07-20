@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-h1, label, button {
+h1, label, button, #output, #alert-message, #credit a {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -32,8 +32,8 @@ h1, label, button {
     flex-direction: column;
 }
 
-#controls button {
-    margin: 0.5em;
+#controls button, #alert button {
+    margin-bottom: 0.5em;
     padding: 0.5em;
     border-radius: 0.5em;
     font-weight: 400;
@@ -78,11 +78,16 @@ label {
 
 input {
     font-size: 1.5em;
-    width: 5em;
+    text-align: center;
+    width: 4em;
 }
 
 #output {
-    height:2em;
+    height: 2em;
+    font-size:2em;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.1em black;
 }
 
 #alert-container {
@@ -108,18 +113,31 @@ input {
     padding: 2em;
     border: 1px solid black;
     border-radius: 1em;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
 }
 
 #alert-message {
-    font-family: monospace;
     font-size: 2em;
     text-align: center;
 }
 
 #alert button {
-    font-family: monospace;
+    color: white;
+    background-color: black;
     font-size: 1.5em;
     padding: 0.2em;
-    border-radius: 0.25em;
+}
+
+#credit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0.5em;
+}
+
+#credit a {
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+    text-decoration: none;
 }
