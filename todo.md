@@ -1,4 +1,1 @@
-- Example Buttons
 - Shrink BG img file size
-- Make responsive
-- Logic for "Enter" button

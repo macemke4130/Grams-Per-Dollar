@@ -101,10 +101,31 @@ const otg = () => {
     if (output.innerText) go();
 }
 
+const example = (x) => {
+    switch (x.id) {
+        case "pedals":
+            oldpart.value = 248;
+            newpart.value = 234;
+            cost.value = 279.99;
+            break;
+        case "cassette":
+            oldpart.value = 534;
+            newpart.value = 470;
+            cost.value = 160;
+            break;
+    }
+
+    if (unit === "grams") {
+        go();
+        return;
+    }
+
+    gto();
+    go();
+}
+
 document.addEventListener('keydown', logKey);
 function logKey(e) {
     if (e.code != "Enter") return;
     go();
 }
-
-// For Example Buttons. Ultegra to DA... --

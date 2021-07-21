@@ -5,6 +5,11 @@
 
 h1, label, button, #output, #alert-message, #credit a, p {
     font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+label {
+    text-align: right;
 }
 
 .hero-image {
@@ -40,7 +45,7 @@ p {
     flex-direction: column;
 }
 
-#controls button, #alert button {
+#controls button, #alert button, #example button {
     margin-bottom: 0.5em;
     padding: 0.5em;
     border-radius: 0.5em;
@@ -92,7 +97,7 @@ input {
 
 #output {
     height: 2em;
-    font-size:2em;
+    font-size: 2em;
     font-weight: 800;
     color: white;
     text-shadow: 0.1em 0.1em 0.1em black;
@@ -150,4 +155,46 @@ input {
     font-size: 1em;
     font-weight: 400;
     text-decoration: none;
+}
+
+#example {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0.5em;
+}
+
+#example button {
+    margin-right: 0.5em;
+}
+
+@media only screen and (max-width: 850px) {
+    * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    label, input {
+        font-size: 1em;
+    }
+
+    #output {
+        font-size: 1.4em;
+    }
+
+    #example {
+        flex-direction: column;
+    }
+
+    #example button {
+        font-size: 0.6em;
+    }
 }
