@@ -1,1 +1,2 @@
 - Shrink BG img file size
+- Clear All button
